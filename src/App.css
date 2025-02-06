@@ -1,0 +1,93 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #282c34; /* Exemple de couleur de fond */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .monkey-image {
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .monkey-text {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
+
+  .image-texte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+  .texte-image{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 50px;
+  }
+
+  h1{
+    font-size: 30px;
+    padding-bottom: 50px;
+  }
+
+  .oswald {
+    font-family: "Oswald", serif;
+  }
+
+  .Kanit {
+    font-family: "Kanit", serif;
+  }
+
+  .image-wall{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+
+  .image-wall div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  .image-wall div img{
+    padding: 30px;
+    width: 500px;
+    height: 600px;
+  }
+
+  .description{
+    display: flex;
+    justify-content:space-around;
+    flex-direction:row;
+    align-items: center;
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  .image-desc{
+    border-radius: 15px;
+    width: 500px;
+    height: 550px;
+  }
