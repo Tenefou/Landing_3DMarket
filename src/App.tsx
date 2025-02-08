@@ -104,7 +104,7 @@ function App() {
         <motion.div className='about-us' initial={{scale:0}}  whileInView={{scale:1}} ref={contact}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop:'100px', paddingBottom:'20px'}}>
-              <h1 className='Kanit'  style={{fontSize:'50px'}}>Interested about us?</h1>
+              <h1 className='Kanit'  style={{fontSize:'40px'}}>Wanna collaborate?</h1>
             </div>
             <Card className="w-[90vh]" style={{padding: '10px'}}>
               <CardHeader>
