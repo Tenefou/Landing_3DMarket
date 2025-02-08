@@ -33,13 +33,13 @@ function App() {
           3D Market
         </div>
         <div className='buttons'>
-        <Button onClick={() => scrollToSection(about)} variant={'outline'}>
+        <Button onClick={() => scrollToSection(about)} variant={'outline'} style={{borderRadius:'7px'}}>
           About
         </Button>
-        <Button onClick={() => scrollToSection(contact)}  variant={'outline'}>
+        <Button onClick={() => scrollToSection(contact)}  variant={'outline'} style={{borderRadius:'7px'}}>
           Contact
         </Button>
-        <Button variant={'outline'}>
+        <Button variant={'outline'} style={{borderRadius:'7px'}}>
           Shop
         </Button>
         
@@ -53,7 +53,7 @@ function App() {
           <div className='image-texte'>
           <motion.p initial={{scale:0}}  whileInView={{scale:1}} className='texte-image Kanit'>Build your own world.</motion.p>
           </div>
-          <Button className='Kanit' variant={"secondary"}>Shop</Button>
+          <Button className='Kanit' variant={"secondary"} style={{borderRadius:'7px'}}>Shop</Button>
         </div>
         <div className='description' ref={about}>
           <div>
