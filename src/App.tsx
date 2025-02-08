@@ -2,12 +2,17 @@ import { useRef } from 'react';
 import './App.css'
 import { Button } from './components/ui/button'
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from './components/ui/carousel'
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from './components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from './components/ui/card';
+import { Input } from './components/ui/input';
+import { motion } from "motion/react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 function App() {
 
-  const section1Ref = useRef<HTMLDivElement | null>(null);
+  const about = useRef<HTMLDivElement | null>(null);
 
+  const contact = useRef<HTMLDivElement | null>(null);
   
   const scrollToSection = (sectionRef: React.RefObject<HTMLDivElement>) => {
     if (sectionRef.current) {
@@ -28,10 +33,10 @@ function App() {
           3D Market
         </div>
         <div className='buttons'>
-        <Button onClick={() => scrollToSection(section1Ref)} variant={'outline'}>
+        <Button onClick={() => scrollToSection(about)} variant={'outline'}>
           About
         </Button>
-        <Button variant={'outline'}>
+        <Button onClick={() => scrollToSection(contact)}  variant={'outline'}>
           Contact
         </Button>
         <Button variant={'outline'}>
@@ -44,13 +49,13 @@ function App() {
       </header>
       <main >
         <div className='image' style={{backgroundImage: "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)),url('/4yxeoawe.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh'}}>
-          <h1 className='oswald'>3D Market</h1>
+          <motion.h1 initial={{scale:0}}  whileInView={{scale:1}} className='oswald'>3D Market</motion.h1>
           <div className='image-texte'>
-          <p className='texte-image Kanit'>Build your own world.</p>
+          <motion.p initial={{scale:0}}  whileInView={{scale:1}} className='texte-image Kanit'>Build your own world.</motion.p>
           </div>
           <Button className='Kanit' variant={"secondary"}>Shop</Button>
         </div>
-        <div className='description' ref={section1Ref}>
+        <div className='description' ref={about}>
           <div>
           <Carousel className='carousel-image'>
             <CarouselContent>
@@ -96,20 +101,50 @@ function App() {
             </Carousel>
           </div>
         </div>
-        <div className='about-us'>
+        <motion.div className='about-us' initial={{scale:0}}  whileInView={{scale:1}} ref={contact}>
           <div>
-            <Card>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop:'100px', paddingBottom:'20px'}}>
+              <h1 className='Kanit'  style={{fontSize:'50px'}}>Interested about us?</h1>
+            </div>
+            <Card className="w-[90vh]" style={{padding: '10px'}}>
               <CardHeader>
                 <CardTitle>Contact</CardTitle>
-              </CardHeader>
+               </CardHeader>
               <CardContent>
-                <p>Card Content</p>
+                <form>
+                  <div className="grid w-full items-center gap-4">
+                    <div className="flex flex-col space-y-1.5" style={{paddingBottom:'10px'}}>
+                      <Input id="name" placeholder="Email" style={{borderRadius: '7px'}} />
+                    </div>
+                      <div className="flex flex-col space-y-1.5">
+                        <textarea
+                          id="multiline"
+                          placeholder="Type here..."
+                          rows={10}
+                          className="flex w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                          style={{ width: '100%', resize: 'vertical', borderRadius:'7px' }} // Permet le redimensionnement vertical uniquement
+                        />
+                      </div>
+                  </div>
+                </form>
               </CardContent>
-              <CardFooter>
-                <p>Card Footer</p>
+              <CardFooter className="flex" style={{justifyContent: 'end'}}>
+
+                <Button style={{borderRadius: '7px'}}>Send</Button>
               </CardFooter>
             </Card>
           </div>
+        </motion.div>
+        <div className='footer'>
+          <div className='footer-items'>
+            <FontAwesomeIcon icon={faTwitter} />
+          </div>
+          <div className='footer-items'>
+            <FontAwesomeIcon icon={faGithub} />
+          </div>
+          <div className='footer-items'>
+            <FontAwesomeIcon icon={faLinkedin}/>
+          </div> 
         </div>
 
         
