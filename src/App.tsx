@@ -59,18 +59,21 @@ function App() {
           <Button
             onClick={() => scrollToSection(about)}
             variant={'outline'}
-            style={{ borderRadius: '7px' }}
+            style={{ borderRadius: '7px', backgroundColor: '#285467' }}
           >
             About
           </Button>
           <Button
             onClick={() => scrollToSection(contact)}
             variant={'outline'}
-            style={{ borderRadius: '7px' }}
+            style={{ borderRadius: '7px', backgroundColor: '#285467' }}
           >
             Contact
           </Button>
-          <Button variant={'outline'} style={{ borderRadius: '7px' }}>
+          <Button
+            variant={'outline'}
+            style={{ borderRadius: '7px', backgroundColor: '#285467' }}
+          >
             Shop
           </Button>
         </div>
@@ -116,7 +119,7 @@ function App() {
           <Button
             className="Kanit"
             variant={'secondary'}
-            style={{ borderRadius: '7px' }}
+            style={{ borderRadius: '7px', backgroundColor: '#285467' }}
           >
             Shop
           </Button>
@@ -269,7 +272,12 @@ function App() {
                   </form>
                 </CardContent>
                 <CardFooter className="flex" style={{ justifyContent: 'end' }}>
-                  <Button style={{ borderRadius: '7px' }}>Send</Button>
+                  <Button
+                    className="text-white"
+                    style={{ borderRadius: '7px', backgroundColor: '#285467' }}
+                  >
+                    Send
+                  </Button>
                 </CardFooter>
               </Card>
             </div>
