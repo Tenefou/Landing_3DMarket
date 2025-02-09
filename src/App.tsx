@@ -100,7 +100,7 @@ function App() {
               whileInView={{ scale: 1 }}
               className="texte-image Kanit"
             >
-              Find your dream 3D models.
+              Find your dream 3D models,
             </motion.h1>
           </div>
           <div>
@@ -110,7 +110,7 @@ function App() {
               className="Kanit"
               style={{ fontSize: '50px', paddingBottom: '30px' }}
             >
-              Build your own world.
+              build your own world.
             </motion.h2>
           </div>
           <Button
@@ -121,151 +121,169 @@ function App() {
             Shop
           </Button>
         </div>
-        <div className="description" ref={about}>
-          <div>
-            <Carousel className="carousel-image">
-              <CarouselContent>
-                <CarouselItem>
-                  <img src="3D1.png" alt="Image 1" className="carousel-image" />
-                </CarouselItem>
-                <CarouselItem>
-                  <img src="3D2.png" alt="Image 2" className="carousel-image" />
-                </CarouselItem>
-                <CarouselItem>
-                  <img src="3D3.png" alt="Image 3" className="carousel-image" />
-                </CarouselItem>
-                <CarouselItem>
-                  <img src="3D4.png" alt="Image 3" className="carousel-image" />
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
-          <div>
-            <p
-              className="Kanit"
-              style={{
-                width: '500px',
-                padding: '30px',
-                fontSize: '30px',
-                lineHeight: '50px',
-                textAlign: 'center',
-              }}
-            >
-              Professional 3D models for small and large creators. A vast
-              collection of carefully crafted characters, vehicles, and
-              environments.
-            </p>
-          </div>
-        </div>
-        <div className="description">
-          <div>
-            <p
-              className="Kanit"
-              style={{
-                width: '500px',
-                padding: '30px',
-                fontSize: '30px',
-                lineHeight: '50px',
-                textAlign: 'center',
-              }}
-            >
-              Game-ready animations. Give life to your models with our variety
-              of animations built by professionals.
-            </p>
-          </div>
-          <div>
-            <Carousel className="carousel-image">
-              <CarouselContent>
-                <CarouselItem>
-                  <img
-                    src="voc-voice_of_chernobyl.gif"
-                    alt="Image 1"
-                    className="carousel-image"
-                  />
-                </CarouselItem>
-                <CarouselItem>
-                  <img
-                    src="sonic-cry-about-it.gif"
-                    alt="Image 2"
-                    className="carousel-image"
-                  />
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
-        </div>
-        <motion.div
-          className="about-us"
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          ref={contact}
-        >
-          <div>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                paddingTop: '100px',
-                paddingBottom: '20px',
-              }}
-            >
-              <h1 className="Kanit" style={{ fontSize: '40px' }}>
-                Wanna collaborate?
-              </h1>
+        <div>
+          <h1 className="Kanit title-sections" ref={about}>
+            About
+          </h1>
+          <div className="description">
+            <div>
+              <Carousel className="carousel-image">
+                <CarouselContent>
+                  <CarouselItem>
+                    <img
+                      src="3D1.png"
+                      alt="Image 1"
+                      className="carousel-image"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img
+                      src="3D2.png"
+                      alt="Image 2"
+                      className="carousel-image"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img
+                      src="3D3.png"
+                      alt="Image 3"
+                      className="carousel-image"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img
+                      src="3D4.png"
+                      alt="Image 3"
+                      className="carousel-image"
+                    />
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
-            <Card className="w-[90vh]" style={{ padding: '10px' }}>
-              <CardHeader>
-                <CardTitle>Contact</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form>
-                  <div className="grid w-full items-center gap-4">
-                    <div
-                      className="flex flex-col space-y-1.5"
-                      style={{ paddingBottom: '10px' }}
-                    >
-                      <Input
-                        id="name"
-                        placeholder="Email"
-                        style={{ borderRadius: '7px' }}
-                      />
+            <div>
+              <p
+                className="Kanit"
+                style={{
+                  width: '500px',
+                  padding: '30px',
+                  fontSize: '30px',
+                  lineHeight: '50px',
+                  textAlign: 'center',
+                }}
+              >
+                Professional 3D models for small and large creators. A vast
+                collection of carefully crafted characters, vehicles, and
+                environments.
+              </p>
+            </div>
+          </div>
+          <div className="description">
+            <div>
+              <p
+                className="Kanit"
+                style={{
+                  width: '500px',
+                  padding: '30px',
+                  fontSize: '30px',
+                  lineHeight: '50px',
+                  textAlign: 'center',
+                }}
+              >
+                Game-ready animations. Give life to your models with our variety
+                of animations built by professionals.
+              </p>
+            </div>
+            <div>
+              <Carousel className="carousel-image">
+                <CarouselContent>
+                  <CarouselItem>
+                    <img
+                      src="voc-voice_of_chernobyl.gif"
+                      alt="Image 1"
+                      className="carousel-image"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img
+                      src="sonic-cry-about-it.gif"
+                      alt="Image 2"
+                      className="carousel-image"
+                    />
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
+          </div>
+          <motion.div
+            className="about-us"
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            ref={contact}
+          >
+            <div>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  paddingBottom: '20px',
+                }}
+              >
+                <h1 className="Kanit">Wanna collaborate?</h1>
+              </div>
+              <Card className="w-[90vh]" style={{ padding: '10px' }}>
+                <CardHeader>
+                  <CardTitle>Contact</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <form>
+                    <div className="grid w-full items-center gap-4">
+                      <div
+                        className="flex flex-col space-y-1.5"
+                        style={{ paddingBottom: '10px' }}
+                      >
+                        <Input
+                          id="name"
+                          placeholder="Email"
+                          style={{ borderRadius: '7px' }}
+                        />
+                      </div>
+                      <div className="flex flex-col space-y-1.5">
+                        <textarea
+                          id="multiline"
+                          placeholder="Type here..."
+                          rows={10}
+                          className="flex w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                          style={{
+                            width: '100%',
+                            resize: 'vertical',
+                            borderRadius: '7px',
+                          }} // Permet le redimensionnement vertical uniquement
+                        />
+                      </div>
                     </div>
-                    <div className="flex flex-col space-y-1.5">
-                      <textarea
-                        id="multiline"
-                        placeholder="Type here..."
-                        rows={10}
-                        className="flex w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                        style={{
-                          width: '100%',
-                          resize: 'vertical',
-                          borderRadius: '7px',
-                        }} // Permet le redimensionnement vertical uniquement
-                      />
-                    </div>
-                  </div>
-                </form>
-              </CardContent>
-              <CardFooter className="flex" style={{ justifyContent: 'end' }}>
-                <Button style={{ borderRadius: '7px' }}>Send</Button>
-              </CardFooter>
-            </Card>
-          </div>
-        </motion.div>
-        <div className="footer">
-          <div className="footer-items">
-            <FontAwesomeIcon icon={faTwitter} />
-          </div>
-          <div className="footer-items">
-            <FontAwesomeIcon icon={faGithub} />
-          </div>
-          <div className="footer-items">
-            <FontAwesomeIcon icon={faLinkedin} />
+                  </form>
+                </CardContent>
+                <CardFooter className="flex" style={{ justifyContent: 'end' }}>
+                  <Button style={{ borderRadius: '7px' }}>Send</Button>
+                </CardFooter>
+              </Card>
+            </div>
+          </motion.div>
+          <div className="footer">
+            <div className="footer-items">
+              <FontAwesomeIcon icon={faTwitter} />
+            </div>
+            <div className="footer-items">
+              <FontAwesomeIcon icon={faGithub} />
+            </div>
+            <div className="footer-items">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </div>
           </div>
         </div>
       </main>
